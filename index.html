@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registration</title>
+    <link rel="stysheet" href="jquery.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: aqua;
+    }
+    
+    .container {
+        font-family: 'Courier New', Courier, monospace;
+        width: 80%;
+        padding: 30px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        box-shadow: black;
+        padding-top: 0px;
+    }
+    
+    .h2 {
+        text-align: center;
+        margin-left: 50px;
+    }
+    
+    .container h2 {
+        width: 100%;
+        color: black;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .row {
+        margin-left: 390px;
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(autofit, mimax(300px, 1fr));
+    }
+    
+    .container .row .col {
+        position: relative;
+        width: 100%;
+        padding: 0 0px;
+    }
+    
+    .col #txtAbout {
+        padding: 20px;
+        height: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h2>Registration Form </h2>
+            <div class="row">
+                <div class="col">
+                    User ID:
+                </div>
+                <div class="col">
+                    <input type="text" name="txtUserID" id="txtUserID" required>
+                    <span id="statusOfUserID"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Password:
+                </div>
+                <div class="col">
+                    <input type="password" name="txtPassword" id="txtPassword">
+                    <span id="statusOfPassword"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    Name :
+                </div>
+
+                <div class="col">
+                    <input type="text" name="txtName" id="txtName" required>
+                    <span id="statusOfName"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    Address:
+                </div>
+                <div class="col">
+                    <input type="text" name="txtAddress" id="txtAddress">
+                    <span id="statusOfAddress"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Country :
+                </div>
+                <div class="col">
+                    <select name="" id="txtSelect" style="width: 170px; margin: 10px 0">
+                    <option value="Please select a country">Please select a country</option>
+                    <option value="Viet Nam">Viet Nam</option>
+                    <option value="America">America</option>
+                    <option value="Russia">Russia</option>
+                    <option value="England">England</option>
+                    <option value="France">France</option>
+                </select>
+                    <span id="statusOfSelect"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Zip Code:
+                </div>
+                <div class="col">
+                    <input type="text" id="txtId">
+                    <span id="statusOfId"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Email:
+                </div>
+                <div class="col">
+                    <input type="text" name="" id="txtEmail">
+                    <span id="statusOfEmail"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Sex:
+                </div>
+                <div class="col">
+                    <input type="radio" name="gender" id="txtGender"> Male
+                    <input type="radio" name="gender" id="txtGender"> Female
+                    <span id="statusOfGender"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Language:
+                </div>
+                <div class="col">
+                    <input type="checkbox" id="txtCheckbox" name="language"> English
+                    <input type="checkbox" id="txtCheckbox" name="language"> Non English
+                    <span id="statusOfCheckbox"></span>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col">
+                About:
+            </div>
+            <div class="col">
+                <input type="text" name="" id="txtAbout" style="padding: 100px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+            </div>
+            <div class="col">
+                <input type="submit" name="btnRegister" id="btnRegister" value="Submit">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="module" src="validate.js"></script>
+</body>
+
+</html>
